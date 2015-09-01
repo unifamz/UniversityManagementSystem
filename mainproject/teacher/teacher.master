@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="teacher.master.cs" Inherits="teacher_teacher" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+
+    <!--Scripts-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div class="row" style="height: 100px">
+            <div class="container-fluid bg-primary" style="height: 100px; background-color: #094890">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div style="height: 50px; text-align:center;" >
+                    <asp:Label ID="lbname" runat="server" class="navbar-brand" Font-Underline="true" style="color:White; font-size: xx-large; text-align: center; width: 1000px;"></asp:Label>
+                   <a href="../login/login.aspx" class="pull-right" style="color: Gray; font-size:x-large">Logout</a> 
+                </div>
+                <div style="height: 50px">
+                    <ul class="nav navbar-left navbar-nav">
+                        <li><a href="#" style="color: #fa1313; font-size: larger">Courses</a></li>
+                        <li><a href="tonline.aspx" style="color: #fa1313; font-size: larger">Online</a></li>
+                        <%--<li><a href="tdetails.aspx" style="color: #fa1313; font-size: larger">Details</a></li>--%>
+                        <li><a href="tattendence.aspx" style="color: #fa1313; font-size: larger">Attendence</a></li>
+                        <li><a href="tassignment.aspx" style="color: #fa1313; font-size: larger">Assignment</a></li>
+                        <li><a href="ttimetable.aspx"  style="color: #fa1313; font-size: larger">Time Table</a></li>
+                        
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color: #fa1313; font-size: larger">Details<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="tstudentdetails.aspx">Student</a></li>
+                                <li><a href="tteacherdetails.aspx">Teacher</a></li>   
+                            </ul>
+                        </li>
+
+                         <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color: #fa1313; font-size: larger">Placement<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="teligiblestudents.aspx">Eligible Students</a></li>
+                                <li><a href="tplacementnews.aspx">Placement News</a></li>   
+                            </ul>
+                        </li>
+
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color: #fa1313; font-size: larger">Result<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="tsessional.aspx">Sessional</a></li>
+                                <li><a href="tinternal.aspx">Internal</a></li>   
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div class="container-fluid" style="height:40px; background-color:lightsalmon">
+            <h4 style="text-align:center; vertical-align:bottom; height:40px">Copyright © 2015</h4>
+        </div>
+    </form>
+</body>
+</html>
